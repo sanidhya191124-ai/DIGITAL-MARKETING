@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital™ | Elite Performance Marketing & Revenue Engine</title>
+    <meta name="description" content="NexusGrowth is a data-engineered digital marketing agency scaling B2B SaaS, eCommerce, and tech startups with multi-channel paid ads, SEO, and CRO.">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            accent: '#06b6d4',
+                            emerald: '#10b981',
+                            dark: '#090d16',
+                            card: '#111726',
+                            border: '#1e293b'
+                        }
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #080c14;
+            color: #f1f5f9;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #080c14; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4f46e5; }
+        .glow-radial {
+            background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.18) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 60%);
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid lch(34.48% 69.83 35.38 / 0);
+        } 
+        .glass-panel:hover {
+            border-color: hwb(231 36% 0% / 0.416);
+        }
+    </style>
+</head>
+<body class="selection:bg-brand-500 selection:text-white">
+
+   
+
+    <!-- 2. STICKY NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center shadow-lg shadow-brand-500/25 group-hover:scale-105 transition-transform">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-extrabold tracking-tight text-white">Digital<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-accent">Growth</span></span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#services" class="hover:text-white transition-colors">Services</a>
+                    <a href="#case-studies" class="hover:text-white transition-colors">Case Studies</a>
+                    <a href="#calculator" class="hover:text-white transition-colors">ROI Engine</a>
+                    <a href="#methodology" class="hover:text-white transition-colors">Framework</a>
+                    <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+                    <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                </nav>
+
+                <div class="hidden md:flex items-center gap-4">
+                    <button onclick="openModal()" class="relative inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 bg-gradient-to-r from-brand-600 to-brand-500 rounded-lg hover:shadow-lg hover:shadow-brand-500/30 hover:scale-[1.02] active:scale-[0.98]">
+                        Book for digital growth 
+                    </button>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none" aria-label="Toggle Navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-[#0d121f] px-6 pt-4 pb-6 space-y-4">
+            <a href="#services" class="block text-slate-300 hover:text-white text-base py-1">Services</a>
+            <a href="#case-studies" class="block text-slate-300 hover:text-white text-base py-1">Case Studies</a>
+            <a href="#calculator" class="block text-slate-300 hover:text-white text-base py-1">ROI Calculator</a>
+            <a href="#Framwrok" class="block text-slate-300 hover:text-white text-base py-1">Framework</a>
+            <a href="#pricing" class="block text-slate-300 hover:text-white text-base py-1">Pricing</a>
+            <a href="#faq" class="block text-slate-300 hover:text-white text-base py-1">FAQ</a>
+            <button onclick="openModal()" class="w-full mt-2 py-3 text-center font-semibold text-white bg-gradient-to-r from-brand-600 to-brand-500 rounded-lg shadow-md">
+                        Book for digital growth 
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- 3. HERO SECTION -->
+        <section class="relative pt-24 pb-20 md:pt-32 md:pb-28 glow-radial overflow-hidden">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-brand-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-brand-500/30 text-xs md:text-sm font-medium text-slate-300 mb-8 animate-pulse-slow">
+                    <span class="w-2 h-2 rounded-full bg-brand-emerald animate-ping"></span>
+                    <span class="text-white font-semibold">Over 50k +</span> Revenue Generated for High-Growth Tech
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] max-w-5xl mx-auto">
+                    Scale Your Pipeline With <br class="hidden sm:inline">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-indigo-300 to-brand-accent">
+                        Digital marketing Growth
+                    </span>
+                </h1>
+
+                <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    "We transform businesses into powerful digital brands through strategic social media marketing, engaging content creation, targeted advertising, data-driven campaigns, and conversion-focused strategies that increase sales, and accelerate business growth."                </p>
+
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="openModal()" class="w-full sm:w-auto px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-brand-600 to-brand-500 rounded-xl shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group">
+                        <span>Get Free Growth Audit</span>
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                    <a href="#case-studies" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-slate-300 glass-panel rounded-xl hover:text-white hover:border-slate-600 transition-all flex items-center justify-center gap-2">
+                        View Client Results
+                    </a>
+                </div>
+\
+
+                <!-- Dashboard Graphic Preview -->
+                <div class="mt-14 relative max-w-5xl mx-auto">
+                    <div class="glass-panel rounded-2xl p-4 sm:p-6 shadow-2xl border border-slate-800 text-left">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800/60 mb-6">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                                <span class="text-xs text-slate-500 font-mono ml-2">nexus_growth_analytics_engine.live</span>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-brand-emerald/10 text-brand-emerald">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald animate-pulse"></span> Live Multi-Touch Attribution
+                            </span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                                <span class="text-xs text-slate-400 uppercase font-semibold">Monthly Tracked Pipeline</span>
+                                <div class="text-2xl font-bold text-white mt-1">$50,400 <span class="text-xs text-brand-emerald font-normal ml-1">▲ +34.2%</span></div>
+                            </div>
+                            <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                                <span class="text-xs text-slate-400 uppercase font-semibold">Blended Target CAC</span>
+                                <div class="text-2xl font-bold text-white mt-1">$60.50<span class="text-xs text-brand-emerald font-normal ml-1">▼ -28.6%</span></div>
+                            </div>
+                            <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                                <span class="text-xs text-slate-400 uppercase font-semibold">Omnichannel Blended ROAS</span>
+                                <div class="text-2xl font-bold text-white mt-1">3.34px <span class="text-xs text-brand-emerald font-normal ml-1">▲ +1.1x</span></div>
+                            </div>
+                        </div>
+
+                        <div class="h-44 sm:h-56 w-full flex items-end gap-2 sm:gap-3 px-2 pt-8 pb-2 bg-slate-900/30 rounded-xl border border-slate-800/40">
+                            <div class="flex-1 flex flex-col justify-end items-center h-full gap-1">
+                                <div class="w-full bg-brand-600/30 rounded-t h-[10%]"></div>
+                                <span class="text-[10px] text-slate-500">W1</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-end items-center h-full gap-1">
+                                <div class="w-full bg-brand-600/40 rounded-t h-[20%]"></div>
+                                <span class="text-[10px] text-slate-500">W2</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-end items-center h-full gap-1">
+                                <div class="w-full bg-brand-600/50 rounded-t h-[20%]"></div>
+                                <span class="text-[10px] text-slate-500">W3</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-end items-center h-full gap-1">
+                                <div class="w-full bg-brand-600/65 rounded-t h-[50%]"></div>
+                                <span class="text-[10px] text-slate-500">W4</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-end items-center h-full gap-1">
+                                <div class="w-full bg-brand-600/80 rounded-t h-[70%]"></div>
+                                <span class="text-[10px] text-slate-500">W5</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-end items-center h-full gap-1">
+                                <div class="w-full bg-gradient-to-t from-brand-600 to-brand-accent rounded-t h-[70%] relative">
+                                    <div class="absolute -top-7 left-1/2 -translate-x-1/2 bg-brand-accent text-slate-900 font-bold text-[10px] px-1.5 py-0.5 rounded shadow">
+                                        Record!
+                                    </div>
+                                </div>
+                                <span class="text-[10px] text-brand-accent font-bold">W6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CLIENT LOGOS -->
+        <section class="py-12 border-y border-slate-800 bg-[#070b12]">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-xs uppercase font-semibold text-slate-400 tracking-wider mb-8">
+                    Empowering Next-Gen Industry Leaders & Fast-Growing Scaleups
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-60">
+                    <span class="text-xl font-bold tracking-tight text-slate-300 hover:text-white transition-colors">sonata</span>
+                    <span class="text-xl font-bold tracking-tight text-slate-300 hover:text-white transition-colors">Fan PAY</span>
+                    <span class="text-xl font-bold tracking-tight text-slate-300 hover:text-white transition-colors">import goods  </span>
+                    <span class="text-xl font-bold tracking-tight text-slate-300 hover:text-white transition-colors">Rk sunglasses</span>
+                    <span class="text-xl font-bold tracking-tight text-slate-300 hover:text-white transition-colors">kewol technologies </span>
+                    <span class="text-xl font-bold tracking-tight text-slate-300 hover:text-white transition-colors">Martinos pizza</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SERVICES BENTO GRID -->
+        <section id="services" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-400 font-semibold text-sm uppercase tracking-wider">Comprehensive Growth Suite</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 tracking-tight">
+                        Everything You Need to Dominate Your Category.
+                    </h2>
+                    <p class="text-slate-400 mt-4 text-base sm:text-lg">
+                        We don't sell random marketing hours. We build, manage, and scale high-converting revenue infrastructure.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Service 1 -->
+                    <div class="glass-panel p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Paid Acquisition & Media Buying</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Precision targeting and high-velocity creative testing across Meta, Google Ads, TikTok, and LinkedIn with algorithmic bid management.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Omnichannel Attribution</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Creative Fatigue Shielding</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Automated Dayparting & Bidding</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-panel p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-brand-accent flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-slate-900 transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3"> Search Authority</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Capture high-intent organic search volume with technical audits, programmatic page generation, and high-authority link acquisition.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> High-Intent Bottom-Funnel Keywords</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Programmatic Directory Pages</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Enterprise Technical Health Fixing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-panel p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-brand-emerald flex items-center justify-center mb-6 group-hover:bg-brand-emerald group-hover:text-slate-900 transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">CRO & Funnel Engineering</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Double your conversion rates without increasing ad budget. Multivariate split-testing and friction-free checkout flows.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Heatmap & Session Recording Audits</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> High-Speed Modular Landing Pages</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Micro-copy & Objection Busting</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="glass-panel p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">High-Impact Creative Studio</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Direct response video ads, vetted UGC creator production, motion graphics, and 3D renders designed to stop the scroll.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> 20+ Net New Ad Hooks Per Month</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Vetted Creator Network</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> 3D Product & Interactive Assets</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="glass-panel p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 flex items-center justify-center mb-6 group-hover:bg-yellow-500 group-hover:text-slate-900 transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Retention, Email & SMS Marketing</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Turn one-time buyers into lifelong brand champions with personalized Klaviyo and Customer.io automated lifecycle flows.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Advanced Customer Segmenting</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Churn Prevention & Winback Sequences</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> VIP Loyalty & Referral Triggers</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="glass-panel p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 flex items-center justify-center mb-6 group-hover:bg-red-500 group-hover:text-white transition-all">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Marketing Data Science & BI</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Server-side tracking, First-party data warehouses, and custom executive dashboards to monitor real CAC and payback periods.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> CAPI & Server-Side Event Tracking</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Real-Time Executive Profit Dashboards</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-accent">✓</span> Cohort LTV & Payback Horizon Modeling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. INTERACTIVE ROI CALCULATOR -->
+        <section id="calculator" class="py-24 bg-gradient-to-b from-[#080c14] via-[#0d1322] to-[#080c14] relative">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-brand-accent font-semibold text-sm uppercase tracking-wider">Financial Modeling Tool</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+                        Calculate Your Projected Pipeline Growth
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-3">
+                        Adjust the sliders to simulate revenue lift under NexusGrowth's benchmark performance metrics.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-6 sm:p-10 rounded-3xl border border-slate-700/60 shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label for="spend-slider" class="text-sm font-semibold text-slate-300">Monthly Ad Spend ($)</label>
+                                    <span id="spend-val" class="text-base font-bold text-brand-400 font-mono">25,000</span>
+                                </div>
+                                <input type="range" id="spend-slider" min="5000" max="250000" step="5000" value="25000" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                                <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                                    <span>$10,000</span>
+                                    <span>$30,000</span>
+                                    <span>$290  00</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label for="aov-slider" class="text-sm font-semibold text-slate-300">Avg. Order / ACV Value ($)</label>
+                                    <span id="aov-val" class="text-base font-bold text-brand-400 font-mono">$120</span>
+                                </div>
+                                <input type="range" id="aov-slider" min="13000" max="28000" step="10" value="120" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                                <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                                    <span>$13000</span>
+                                    <span>$28000</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label for="cvr-slider" class="text-sm font-semibold text-slate-300">Current Funnel Conversion Rate (%)</label>
+                                    <span id="cvr-val" class="text-base font-bold text-brand-400 font-mono">2.2%</span>
+                                </div>
+                                <input type="range" id="cvr-slider" min="0.5" max="8.0" step="0.1" value="2.2" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                                <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                                    <span>0.%</span>
+                                    <span>4.0%</span>
+                                    <span>8.0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-brand-900/40 via-slate-900 to-slate-950 p-6 sm:p-8 rounded-2xl border border-brand-500/30 text-center relative overflow-hidden">
+                            <span class="text-xs uppercase font-semibold text-brand-400 tracking-wider">Projected Monthly Revenue</span>
+                            <div id="projected-rev" class="text-4xl sm:text-5xl font-extrabold text-white my-3 font-mono">101,122</div>
+                            <p class="text-xs text-slate-400">Estimated based on a typical +45% CRO lift and 4.35x blended return.</p>
+
+                            <div class="grid grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-800">
+                                <div>
+                                    <span class="text-[11px] text-slate-400 uppercase">Estimated Net Profit Lift</span>
+                                    <div id="net-profit" class="text-xl font-bold text-brand-emerald font-mono mt-1">+$38,250</div>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] text-slate-400 uppercase">Projected ROAS</span>
+                                    <div id="calc-roas" class="text-xl font-bold text-brand-accent font-mono mt-1">4.35x</div>
+                                </div>
+                            </div>
+
+                            <button onclick="openModal()" class="w-full mt-6 py-3.5 px-6 font-bold text-sm text-white bg-gradient-to-r from-brand-600 to-brand-500 rounded-xl hover:shadow-lg hover:shadow-brand-500/30 hover:scale-[1.02] transition-all">
+                                Claim This Scale Blueprint &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CASE STUDIES -->
+        <section id="case-studies" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <span class="text-brand-400 font-semibold text-sm uppercase tracking-wider">Validated Results</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 tracking-tight">
+                            Real Scale. Audited Numbers.
+                        </h2>
+                    </div>
+                    <p class="text-slate-400 text-sm md:text-base max-w-md mt-4 md:mt-0">
+                        Explore how we helped high-growth brands unlock explosive pipeline velocity and category authority.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition-all group">
+                        <div class="h-44 bg-gradient-to-tr from-brand-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800/80">
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-white/10 text-brand-400 w-fit">FinTech Scaleup</span>
+                            <div class="text-3xl font-extrabold text-white">+412% ARR</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2">VortexPay: Scaling B2B Card Processing</h3>
+                            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+                                Re-engineered their LinkedIn and Google Search intent funnels, cutting cost per qualified lead from $340 to $98 in 5 months.
+                            </p>
+                            <div class="flex items-center justify-between text-xs pt-4 border-t border-slate-800/80 text-slate-300">
+                                <span>Timeline: <strong>5 Months</strong></span>
+                                <span>ROAS: <strong class="text-brand-emerald">5.2x</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition-all group">
+                        <div class="h-44 bg-gradient-to-tr from-cyan-950/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800/80">
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-white/10 text-brand-accent w-fit">D2C eCommerce</span>
+                            <div class="text-3xl font-extrabold text-white">$50k &rarr; $480k/mo</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2">Zenith Sleep: Performance Creative Overhaul</h3>
+                            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+                                Deployed 40+ direct-response UGC hooks on TikTok and Meta with custom quiz landing pages that boosted checkout conversion by 78%.
+                            </p>
+                            <div class="flex items-center justify-between text-xs pt-4 border-t border-slate-800/80 text-slate-300">
+                                <span>Timeline: <strong>8 Months</strong></span>
+                                <span>Blended ROAS: <strong class="text-brand-emerald">3.9x</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition-all group">
+                        <div class="h-44 bg-gradient-to-tr from-purple-950/60 to-slate-900 p-6 flex flex-col justify-between border-b border-slate-800/80">
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-white/10 text-purple-400 w-fit">Enterprise SaaS</span>
+                            <div class="text-3xl font-extrabold text-white">-54% Blended CAC</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2">CloudNest: Programmatic SEO & Inbound</h3>
+                            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+                                Generated 1,200+ programmatic comparison pages capturing bottom-funnel software buyers without extra ad budget.
+                            </p>
+                            <div class="flex items-center justify-between text-xs pt-4 border-t border-slate-800/80 text-slate-300">
+                                <span>Organic Traffic: <strong>+320k/mo</strong></span>
+                                <span>SQLs: <strong class="text-brand-emerald">+2,150</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. PRICING SECTION -->
+        <section id="pricing" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-brand-400 font-semibold text-sm uppercase tracking-wider">Transparent Partnerships</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 tracking-tight">
+                        Predictable Investments. Explosive Returns.
+                    </h2>
+                    <p class="text-slate-400 mt-4 text-sm sm:text-base">
+                        Month-to-month contracts after an initial 90-day scale sprint. No hostage fees or hidden retainers.
+                    </p>
+
+                    <!-- Billing Toggle -->
+                    <div class="mt-8 flex items-center justify-center gap-3">
+                        <span id="label-monthly" class="text-sm font-semibold text-white">Monthly</span>
+                        <button id="billing-toggle" type="button" class="w-14 h-8 bg-brand-600 rounded-full p-1 transition-colors relative" aria-label="Toggle Quarterly Discount">
+                            <div id="toggle-knob" class="w-6 h-6 bg-white rounded-full shadow transition-transform"></div>
+                        </button>
+                        <span id="label-quarterly" class="text-sm font-semibold text-slate-400 flex items-center gap-1.5">
+                            Quarterly <span class="text-[11px] font-bold text-brand-emerald bg-brand-emerald/10 px-2 py-0.5 rounded-full">Save 20%</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                    <!-- Tier 1 -->
+                    <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-slate-400 tracking-wider">Launchpad</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">Growth Foundation</h3>
+                            <p class="text-xs text-slate-400 mt-2">Ideal for early startups validated at 10k-20k/mo spend.</p>
+                            <div class="mt-6">
+                                <span class="text-4xl font-extrabold text-white font-mono price-val" data-monthly="3,800" data-quarterly="3,040">$3,800</span>
+                                <span class="text-xs text-slate-400">/month</span>
+                            </div>
+                            <ul class="space-y-3 mt-8 text-xs sm:text-sm text-slate-300">
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> 2 Managed Ad Channels (Meta & Google)</li>
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> 8 Fresh Ad Creatives / Month</li>
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> Bi-Weekly Strategy Sprints</li>
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> First-Party Attribution Dashboard</li>
+                            </ul>
+                        </div>
+                        <button onclick="openModal('Growth Foundation')" class="w-full mt-8 py-3.5 px-4 font-semibold text-sm text-white glass-panel rounded-xl hover:border-slate-500 transition-all">
+                            Get Started
+                        </button>
+                    </div>
+
+                    <!-- Tier 2 (Featured) -->
+                    <div class="glass-panel p-8 rounded-3xl border-2 border-brand-500 relative flex flex-col justify-between shadow-2xl shadow-brand-500/20 bg-gradient-to-b from-brand-950/30 to-slate-900">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-600 to-brand-accent text-white font-bold text-xs uppercase px-3 py-1 rounded-full shadow">
+                            Most Popular Scaleup Tier
+                        </div>
+                        <div>
+                            <span class="text-xs uppercase font-bold text-brand-400 tracking-wider">HyperScale</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">Full-Stack Revenue Engine</h3>
+                            <p class="text-xs text-slate-400 mt-2">For high-growth scaleups spending $10k-$20k+/month.</p>
+                            <div class="mt-6">
+                                <span class="text-4xl font-extrabold text-white font-mono price-val" data-monthly="6,800" data-quarterly="5,440">$6,800</span>
+                                <span class="text-xs text-slate-400">/month + 4% rev share</span>
+                            </div>
+                            <ul class="space-y-3 mt-8 text-xs sm:text-sm text-slate-300">
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> Omnichannel Media (Meta, Google, TikTok, LinkedIn)</li>
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> 20+ Direct Response Video & Static Ads</li>
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> 2 Dedicated High-Speed CRO Landing Pages / Mo</li>
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> Dedicated Senior Growth Lead + Slack Room</li>
+                            </ul>
+                        </div>
+                        <button onclick="openModal('HyperGrowth Engine')" class="w-full mt-8 py-3.5 px-4 font-bold text-sm text-white bg-gradient-to-r from-brand-600 to-brand-500 rounded-xl hover:shadow-lg hover:shadow-brand-500/30 hover:scale-[1.02] transition-all">
+                            Get started
+                        </button>
+                    </div>
+
+                    <!-- Tier 3 -->
+                    <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-slate-400 tracking-wider">Enterprise</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">Market Domination</h3>
+                            <p class="text-xs text-slate-400 mt-2">For market leaders with $10k+ monthly budgets.</p>
+                            <div class="mt-6">
+                                <span class="text-4xl font-extrabold text-white font-mono">Custom</span>
+                                <span class="text-xs text-slate-400">/tailored SLA</span>
+                            </div>
+                            <ul class="space-y-3 mt-8 text-xs sm:text-sm text-slate-300">
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> Dedicated 6-Person Squad</li>
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> Unlimited High-Velocity Creative Iterations</li>
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> Full Programmatic SEO Engine Deployment</li>
+                                <li class="flex items-center gap-2.5"><span class="text-brand-accent">✓</span> 24/7 Priority Emergency Coverage</li>
+                            </ul>
+                        </div>
+                        <button onclick="openModal('Enterprise Custom')" class="w-full mt-8 py-3.5 px-4 font-semibold text-sm text-white glass-panel rounded-xl hover:border-slate-500 transition-all">
+                            Talk  With  marketing  manager
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FAQ ACCORDION -->
+        <section id="faq" class="py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-brand-400 font-semibold text-sm uppercase tracking-wider">Frequently Asked Questions</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+                        Common Questions & Clear Answers
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="glass-panel rounded-xl border border-slate-800 overflow-hidden">
+                        <button class="w-full p-5 text-left font-semibold text-white flex justify-between items-center focus:outline-none faq-btn">
+                            <span>How quickly do we see measurable traction?</span>
+                            <span class="text-brand-400 text-xl font-mono faq-icon">+</span>
+                        </button>
+                        <div class="px-5 pb-5 text-slate-400 text-sm hidden faq-content">
+                            Our onboarding and tracking verification sprint takes 5 business days. We launch initial creative test batches by day 10, typically validating winning ad hooks within the first 2-3 weeks of live spend.
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-xl border border-slate-800 overflow-hidden">
+                        <button class="w-full p-5 text-left font-semibold text-white flex justify-between items-center focus:outline-none faq-btn">
+                            <span>Are there long-term locked contracts?</span>
+                            <span class="text-brand-400 text-xl font-mono faq-icon">+</span>
+                        </button>
+                        <div class="px-5 pb-5 text-slate-400 text-sm hidden faq-content">
+                            We operate on a 90-day foundational sprint (the minimum duration required to rigorously test and scale multi-channel loops). After that, we transition to flexible month-to-month contracts.
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-xl border border-slate-800 overflow-hidden">
+                        <button class="w-full p-5 text-left font-semibold text-white flex justify-between items-center focus:outline-none faq-btn">
+                            <span>What minimum monthly ad budget is required?</span>
+                            <span class="text-brand-400 text-xl font-mono faq-icon">+</span>
+                        </button>
+                        <div class="px-5 pb-5 text-slate-400 text-sm hidden faq-content">
+                            We recommend a minimum ad spend of $10,000/month across Meta, Google, or TikTok to provide sufficient statistical significance for our algorithmic testing protocols.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 10. LEAD CAPTURE MODAL -->
+    <div id="audit-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-panel bg-[#0e1424] border border-slate-700/80 p-6 sm:p-8 rounded-2xl max-w-lg w-full relative shadow-2xl scale-95 transition-transform duration-300" id="modal-box">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1" aria-label="Close Modal">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <div id="modal-form-view">
+                <div class="mb-6">
+                    <span class="text-xs uppercase font-bold text-brand-400 tracking-wider">Free 30-Min Forensic Growth Audit</span>
+                    <h3 class="text-2xl font-extrabold text-white mt-1">Book Your Strategy Session</h3>
+                    <p class="text-xs text-slate-400 mt-1">We'll review your live accounts and diagnose your biggest revenue bottlenecks.</p>
+                </div>
+
+                <form onsubmit="handleAuditSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Your Full Name *</label>
+                        <input type="text" required placeholder="Alex Mercer" class="w-full px-3.5 py-2.5 bg-slate-900/90 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Work Email Address *</label>
+                        <input type="email" required placeholder="alex@company.com" class="w-full px-3.5 py-2.5 bg-slate-900/90 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Company Website URL *</label>
+                        <input type="url" required placeholder="https://yourbrand.com" class="w-full px-3.5 py-2.5 bg-slate-900/90 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Current Monthly Ad Spend</label>
+                        <select class="w-full px-3.5 py-2.5 bg-slate-900/90 border border-slate-700 rounded-lg text-sm text-white focus:outline-none focus:border-brand-500">
+                            <option value="under-10k">Under $10,000 / month</option>
+                            <option value="10k-50k" selected>$10,000 - $50,000 / month</option>
+                            <option value="50k-150k">$50,000 - $150,000 / month</option>
+                            <option value="150k+">$150,000+ / month</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 font-bold text-sm text-white bg-gradient-to-r from-brand-600 to-brand-500 rounded-xl hover:shadow-lg hover:shadow-brand-500/30 transition-all mt-2">
+                        Lock In My Free Audit &rarr;
+                    </button>
+                </form>
+            </div>
+
+            <div id="modal-success-view" class="hidden text-center py-8 space-y-4">
+                <div class="w-14 h-14 bg-brand-emerald/10 border border-brand-emerald/30 text-brand-emerald rounded-full flex items-center justify-center mx-auto text-2xl">
+                    ✓
+                </div>
+                <h4 class="text-2xl font-bold text-white">Audit Request Received!</h4>
+                <p class="text-sm text-slate-400 max-w-sm mx-auto">
+                    A Senior Growth Strategist will inspect your domain and reach out within 4 business hours to coordinate our diagnostic session.
+                </p>
+                <button onclick="closeModal()" class="px-6 py-2.5 text-xs font-semibold text-white bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. INTERACTIVE LOGIC SCRIPT -->
+    <script>
+        // Mobile Navigation
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // ROI Calculator
+        const spendSlider = document.getElementById('spend-slider');
+        const aovSlider = document.getElementById('aov-slider');
+        const cvrSlider = document.getElementById('cvr-slider');
+        const spendVal = document.getElementById('spend-val');
+        const aovVal = document.getElementById('aov-val');
+        const cvrVal = document.getElementById('cvr-val');
+        const projectedRev = document.getElementById('projected-rev');
+        const netProfit = document.getElementById('net-profit');
+        const calcRoas = document.getElementById('calc-roas');
+
+        function updateCalculator() {
+            const spend = parseFloat(spendSlider.value);
+            const aov = parseFloat(aovSlider.value);
+            const cvr = parseFloat(cvrSlider.value);
+
+            spendVal.textContent = '$' + spend.toLocaleString();
+            aovVal.textContent = '$' + aov.toLocaleString();
+            cvrVal.textContent = cvr.toFixed(1) + '%';
+
+            const roasMultiplier = 3.2 + (cvr * 0.45);
+            const rev = spend * roasMultiplier;
+            const profit = rev - spend - (rev * 0.28);
+
+            projectedRev.textContent = '$' + Math.round(rev).toLocaleString();
+            netProfit.textContent = '+$' + Math.round(profit).toLocaleString();
+            calcRoas.textContent = roasMultiplier.toFixed(2) + 'x';
+        }
+        spendSlider.addEventListener('input', updateCalculator);
+        aovSlider.addEventListener('input', updateCalculator);
+        cvrSlider.addEventListener('input', updateCalculator);
+        updateCalculator();
+
+        // Pricing Quarterly Toggle
+        const billingToggle = document.getElementById('billing-toggle');
+        const toggleKnob = document.getElementById('toggle-knob');
+        const labelMonthly = document.getElementById('label-monthly');
+        const labelQuarterly = document.getElementById('label-quarterly');
+        const priceVals = document.querySelectorAll('.price-val');
+        let isQuarterly = false;
+
+        billingToggle.addEventListener('click', () => {
+            isQuarterly = !isQuarterly;
+            if (isQuarterly) {
+                toggleKnob.classList.add('translate-x-6');
+                labelMonthly.classList.replace('text-white', 'text-slate-400');
+                labelQuarterly.classList.replace('text-slate-400', 'text-white');
+                priceVals.forEach(el => el.textContent = '$' + el.getAttribute('data-quarterly'));
+            } else {
+                toggleKnob.classList.remove('translate-x-6');
+                labelMonthly.classList.replace('text-slate-400', 'text-white');
+                labelQuarterly.classList.replace('text-white', 'text-slate-400');
+                priceVals.forEach(el => el.textContent = '$' + el.getAttribute('data-monthly'));
+            }
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('.faq-icon');
+                const isHidden = content.classList.contains('hidden');
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+                if (isHidden) {
+                    content.classList.remove('hidden');
+                    icon.textContent = '−';
+                }
+            });
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('audit-modal');
+        const modalBox = document.getElementById('modal-box');
+        const formView = document.getElementById('modal-form-view');
+        const successView = document.getElementById('modal-success-view');
+
+        function openModal() {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100', 'pointer-events-auto');
+            modalBox.classList.remove('scale-95');
+            modalBox.classList.add('scale-100');
+            formView.classList.remove('hidden');
+            successView.classList.add('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.classList.remove('opacity-100', 'pointer-events-auto');
+            modalBox.classList.add('scale-95');
+            modalBox.classList.remove('scale-100');
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        function handleAuditSubmit(e) {
+            e.preventDefault();
+            formView.classList.add('hidden');
+            successView.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

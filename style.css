@@ -1,0 +1,15 @@
+
+/* Element selector */
+p {
+    color: blue;
+}
+
+/* Class selector */
+.note {
+    color: green;
+}
+
+/* ID selector */
+#title {
+    color: red;
+}
